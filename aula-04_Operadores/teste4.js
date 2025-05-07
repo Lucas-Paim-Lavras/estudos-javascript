@@ -9,3 +9,42 @@ num1/=7
 num2 = 8**3
 console.log(num1)
 console.log(num2)
+
+/*🧮 Aritméticos
+    + soma
+    - subtração
+    * multiplicação
+    / divisão
+    % resto da divisão
+    ** exponenciação
+    ++ incremento
+    -- decremento
+
+🧪 Comparação
+    == igual (com coerção de tipo)
+    === estritamente igual (sem coerção)
+    != diferente
+    !== estritamente diferente
+    > maior que
+    < menor que
+    >= maior ou igual
+    <= menor ou igual
+
+🧠 Lógicos
+    && E (and)
+    || OU (or)
+    ! NÃO (not)
+
+📦 Atribuição
+    = atribuição simples
+    +=, -=, *=, /=, %= e **= → combina com operação
+
+🔎 Outros úteis
+    typeof → tipo da variável
+    instanceof → verifica instância de objeto
+    ? : → operador ternário (condição ? valor1 : valor2)
+    , → operador vírgula (executa múltiplas expressões)
+    delete → remove propriedade de objeto
+    in → verifica se uma propriedade existe em um objeto
+    
+    */
