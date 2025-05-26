@@ -9,7 +9,7 @@ console.log(v3)
 console.log(v4)
 
 console.log('-'.repeat(30))
-// o Typeof me diz o tipode variável que temos
+// o Typeof me diz o tipo de variável que temos
 
 console.log(typeof(v1))
 console.log(typeof(v2))
