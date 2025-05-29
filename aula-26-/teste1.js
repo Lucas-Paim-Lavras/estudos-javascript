@@ -1,5 +1,5 @@
 //uma função dentro de outra função - Funções aninhadas
-const soma = (...valores) => {
+const soma1 = (...valores) => {
     const somar = valor =>{
         let res = 0
         for (
@@ -11,7 +11,7 @@ const soma = (...valores) => {
     return somar(valores)
 }
 
-console.log (soma(10, 5, 65))
+console.log (soma1(10, 5, 65))
 
 
 
