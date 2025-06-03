@@ -1,0 +1,26 @@
+.curso{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 2px solid #888;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px 0px;
+    cursor: pointer
+}
+.curso:hover{
+    border-color: rgb(231, 50, 50);
+}
+.c1{
+    background-color: #a1cbd8;
+    color: #312626;
+}
+.c2{
+    background-color: #0e0f49;
+    color: #ccc;
+}
+.destaque{
+    background-color: #800 !important;
+    color: #fcc !important;
+    border-color: #f00 !important;
+}      
