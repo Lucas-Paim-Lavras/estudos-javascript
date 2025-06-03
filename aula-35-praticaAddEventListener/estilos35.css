@@ -1,7 +1,6 @@
 *{
     padding: 0px;
     margin: 0px;
-    border: none;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
@@ -27,9 +26,13 @@ button{
     border-radius: 8px;
     border: none;
     font-weight: bold;
-    transition: background-color 0,3s;
+    transition: background-color 0.3s;
+    margin: 5px;
 }
-
+.caixa_btn{
+    display: flex;
+    flex-direction: column;  
+}
 button:hover {
     background-color: #047;
 }
