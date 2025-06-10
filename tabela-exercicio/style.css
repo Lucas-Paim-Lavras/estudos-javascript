@@ -50,8 +50,7 @@ button{
 }
 
 button:hover {
-    transition: 0.3s;
-    background: rgb(211, 228, 187)  
+    transform: scale(1.02);  
 }
 
 table{
