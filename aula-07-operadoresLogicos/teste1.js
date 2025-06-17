@@ -14,4 +14,3 @@ console.log(n1>n2)||(n1> n3)  //segundo a tabelinha se der verdadeiro nos dois o
 
 console.log(!(n1>n2)||(n1> n3))  //se negarmos a operação o Not vai inverter o resultado
 
-

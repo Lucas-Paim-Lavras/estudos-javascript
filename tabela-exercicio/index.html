@@ -9,7 +9,6 @@
       font-family: Arial, sans-serif;
       margin: 20px;
     table {
-    }
       width: 100%;
       border-collapse: collapse;
     }
@@ -72,48 +71,69 @@
   </table>
 
   <script>
-    function inserirPessoa() {
-      const nome = document.getElementById("nome").value;
-      const telefone = document.getElementById("telefone").value;
-      const cpf = document.getElementById("cpf").value;
-      const email = document.getElementById("email").value;
+const limparInput = ()=>{
+    const input = document.getElementsByClassName('input')
+    for (limpar of input){
+        limpar.value=''
+    }
+}
 
-      const telefoneNumeros = telefone.replace(/\D/g, '');
-      const cpfNumeros = cpf.replace(/\D/g, '');
+function inserirPessoa(){
+    const nome = document.getElementById('inputNome').value
+    const email = document.getElementById('inputEmail').value
+    const tabela = document.getElementById('tabela')
+    const cpf = document.getElementById('inputCpf').value
+    IMask(cpf, {
+    mask: '000.000.000-00'
+    })
+    const telefone = document.getElementById('inputNumeroTelefone').value
+    IMask(telefoneInput, {
+    mask: '(00) 00000-0000'
+    });
 
-      if (telefoneNumeros.length !== 11) {
-        alert("O número de telefone deve conter exatamente 11 dígitos.");
-        return;
-      }
-
-      if (cpfNumeros.length !== 11) {
-        alert("O CPF deve conter exatamente 11 dígitos.");
-        return;
-      }
-
-      const tabela = document.getElementById("tabela-corpo");
-      const linha = document.createElement("tr");
-
-      linha.innerHTML = `
-        <td>${nome}</td>
-        <td><b>${telefone}</b></td>
-        <td>${cpf}</td>
-        <td>${email}</td>
-        <td><button class="remove-btn" onclick="removerLinha(this)">Remover</button></td>
-      `;
-
-      tabela.appendChild(linha);
-
-      document.getElementById("nome").value = "";
-      document.getElementById("telefone").value = "";
-      document.getElementById("cpf").value = "";
-      document.getElementById("email").value = "";
+const telefoneInput = document.getElementById('telefone');
+IMask(telefoneInput, {
+  mask: '(00) 00000-0000'
+});
+    
+    if (nome === "" || numero === "" || cpf === "" || email === ""){
+        alert("Preencha todos os campos")
+        return
     }
 
-    function removerLinha(botao) {
-      const linha = botao.parentNode.parentNode;
-      linha.remove();
-    }
+    let novaLinha = document.createElement('tr')
+    novaLinha.innerHTML = `<td>${nome}</td>
+                            <td>${numero}</td>
+                            <td>${cpf}</td>
+                            <td>${email}</td>
+                            <td><button class="botaoEditar">Editar</button>
+                            <button class="botaoRemover">Remover</button></td>
+                            `
+    tabela.appendChild(novaLinha)
+    limparInput()
+    
+    const botaoRemover = novaLinha.querySelector('.botaoRemover')
+    botaoRemover.addEventListener('click', (evento)=>{
+        novaLinha.remove()
+    })
+
+    const nomeInput = document.getElementById('inputNome')
+    const numeroInput = document.getElementById('inputNumeroTelefone')
+    const cpfInput = document.getElementById('inputCpf')
+    const emailInput = document.getElementById('inputEmail')
+
+    const botaoEditar = novaLinha.querySelector('.botaoEditar')
+    botaoEditar.addEventListener('click', (evento)=>{
+        const dados = novaLinha.querySelectorAll('td')
+        
+        nomeInput.value = dados[0].textContent
+        numeroInput.value = dados[1].textContent
+        cpfInput.value = dados[2].textContent
+        emailInput.value = dados[3].textContent
+
+        novaLinha.remove()
+    })
+}
   </script>
 </body>
 </html>

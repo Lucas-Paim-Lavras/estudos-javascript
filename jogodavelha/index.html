@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jogo da velha</title>
+  </head>
+  <div id="alerta-vitoria" class="alerta" style="display: none">
+    <span id="texto-alerta"></span>
+    <button onclick="fecharAlerta()">OK</button>
+  </div>
+  <body>
+    <h1>Jogo da velha</h1>
+    <div id="id_inputs">
+      Jogador X:
+      <input type="text" placeholder="Nome do jogador x" id="id_input1" />
+      Jogador O:
+      <input type="text" placeholder="Nome do jogador x" id="id_input2" />
+      <button id="btn_iniciarJogo" class="button" onclick="iniciarJogo()">
+        Iniciar a partida
+      </button>
+    </div>
+
+    <div id="tabuleiro"></div>
+
+    <div id="placar">
+      <p id="placarX">Vitórias de X: 0</p>
+      <p id="placarO">Vitórias de O: 0</p>
+    </div>
+
+    <div>
+      <button id="btn_reinicar" class="button" onclick="reiniciarPartida()">
+        Reiniciar partida
+      </button>
+    </div>
+    <script src="plusJogoDaVelha.js"></script>
+  </body>
+</html>
