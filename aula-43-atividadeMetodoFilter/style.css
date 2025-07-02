@@ -17,7 +17,6 @@ button{
     cursor: pointer;
     border-radius: 10px;
 }
-
 .curso{
     display: flex;
     justify-content: center;
@@ -26,24 +25,22 @@ button{
     border-radius: 10px;
     padding: 10px;
     margin: 5px 0px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .selecionado{
     background-color: #800 !important;
     color: #fcc !important;
     border-color: #f00 !important;
 }
-
 .c1{
     background-color: #ccc;
-    color: #444
+    color: #444;
 }
-
 .c2{
     background-color: #444;
-    color: #ccc
+    color: #ccc;
 }
 
 .caixa{
@@ -61,7 +58,7 @@ button{
 
 .btn_lixeira{
     width: 25px;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 .caixaFuncionalidades{
@@ -71,14 +68,12 @@ button{
     align-items: center;
     margin: 5px;
 }
-
 .comandos{
     width: 30%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 #caixaNovoCurso input{
     margin: 10px;
     padding: 5px;

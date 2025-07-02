@@ -71,6 +71,7 @@ function verificarVitoria() {
     [0, 4, 8],
     [2, 4, 6],
   ];
+
   const celulas = document.querySelectorAll(".celula");
 
   return combinacoes.some(([a, b, c]) =>
@@ -85,6 +86,4 @@ function reiniciarPartida() {
   jogoAtivo = true;
   jogadorAtual = "X";
   montarTabuleiro();
-  document.getElementById("mensagem").textContent = "";
 }
-
